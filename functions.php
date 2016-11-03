@@ -502,7 +502,7 @@ function dewi2_scripts_styles() {
 
 	// Register and enqueue our icon font
 	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array( 'normalize' ), '4.2.0', 'all' );
+	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'font-awesome-4.7.0/css/font-awesome.min.css' , array( 'normalize' ), '4.7.0', 'all' );
 	wp_enqueue_style( 'fontawesome' );
 
 	// Our styles for setting up the grid.
@@ -992,7 +992,7 @@ if ( ! function_exists( 'dewi2_get_social_media' ) ) {
                         array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fa-tumblr', 'title' => esc_html__( 'Follow us on Tumblr', 'dewi2' ) ),
 			array( 'url' => of_get_option( 'social_github', '' ), 'icon' => 'fa-github', 'title' => esc_html__( 'Fork me on GitHub', 'dewi2' ) ),
 			array( 'url' => of_get_option( 'social_rss', '' ), 'icon' => 'fa-rss', 'title' => esc_html__( 'Subscribe to our RSS Feed', 'dewi2' ) ),
-                    array( 'url' => of_get_option( 'social_podcast', '' ), 'icon' => 'fa-play-circle-o', 'title' => esc_html__( 'Subscribe to our Podcast', 'dewi2' ) )
+                    array( 'url' => of_get_option( 'social_podcast', '' ), 'icon' => 'fa-podcast', 'title' => esc_html__( 'Subscribe to our Podcast', 'dewi2' ) )
                     );
 
 		foreach ( $icons as $key ) {

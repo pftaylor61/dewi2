@@ -6,6 +6,9 @@
 ## Origins
 The original Dewi theme was based on Themegrill's Spacious theme, with a Child theme added. Eventually, an update to Spacious conflicted with the Child theme, so I combined child and parent theme under a new name - Dewi. Recently, the Dewi theme was found to conflict with the Blubrry Podcasting plugin, which I needed for the operation of my podcast. The Qohelet theme did not conflict with Blubrry, so I built a completely new Dewi theme, using the Qohelet core.
 
+## Version 2.2
+Font Awesome has been upgraded to version 4.7.0, which allows for an icon for podcasting.
+
 ## Version 2.1
 This is the first version built from the Qohelet core.
 
