@@ -198,8 +198,15 @@ function optionsframework_options() {
 		'id' => 'social_rss',
 		'std' => '',
 		'type' => 'text' );
+		
+	$options[] = array(
+		'name' => esc_html__( 'Vodcast', 'dewi2' ),
+		'desc' => esc_html__( 'Enter your Video Podcast Feed URL.', 'dewi2' ),
+		'id' => 'social_vodcast',
+		'std' => '',
+		'type' => 'text' );
         
-        $options[] = array(
+	$options[] = array(
 		'name' => esc_html__( 'Podcast', 'dewi2' ),
 		'desc' => esc_html__( 'Enter your Podcast Feed URL.', 'dewi2' ),
 		'id' => 'social_podcast',

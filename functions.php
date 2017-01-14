@@ -989,10 +989,11 @@ if ( ! function_exists( 'dewi2_get_social_media' ) ) {
 			array( 'url' => of_get_option( 'social_instagram', '' ), 'icon' => 'fa-instagram', 'title' => esc_html__( 'Follow me on Instagram', 'dewi2' ) ),
 			array( 'url' => of_get_option( 'social_vimeo', '' ), 'icon' => 'fa-vimeo', 'title' => esc_html__( 'Visit our Vimeo Channel', 'dewi2' ) ),
 			array( 'url' => of_get_option( 'social_pinterest', '' ), 'icon' => 'fa-pinterest', 'title' => esc_html__( 'Follow us on Pinterest', 'dewi2' ) ),
-                        array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fa-tumblr', 'title' => esc_html__( 'Follow us on Tumblr', 'dewi2' ) ),
+            array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fa-tumblr', 'title' => esc_html__( 'Follow us on Tumblr', 'dewi2' ) ),
 			array( 'url' => of_get_option( 'social_github', '' ), 'icon' => 'fa-github', 'title' => esc_html__( 'Fork me on GitHub', 'dewi2' ) ),
 			array( 'url' => of_get_option( 'social_rss', '' ), 'icon' => 'fa-rss', 'title' => esc_html__( 'Subscribe to our RSS Feed', 'dewi2' ) ),
-                    array( 'url' => of_get_option( 'social_podcast', '' ), 'icon' => 'fa-podcast', 'title' => esc_html__( 'Subscribe to our Podcast', 'dewi2' ) )
+			array( 'url' => of_get_option( 'social_vodcast', '' ), 'icon' => 'fa-television', 'title' => esc_html__( 'Subscribe to our Vodcast', 'dewi2' ) ),
+            array( 'url' => of_get_option( 'social_podcast', '' ), 'icon' => 'fa-podcast', 'title' => esc_html__( 'Subscribe to our Podcast', 'dewi2' ) )
                     );
 
 		foreach ( $icons as $key ) {
