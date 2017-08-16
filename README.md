@@ -6,6 +6,9 @@
 ## Origins
 The original Dewi theme was based on Themegrill's Spacious theme, with a Child theme added. Eventually, an update to Spacious conflicted with the Child theme, so I combined child and parent theme under a new name - Dewi. Recently, the Dewi theme was found to conflict with the Blubrry Podcasting plugin, which I needed for the operation of my podcast. The Qohelet theme did not conflict with Blubrry, so I built a completely new Dewi theme, using the Qohelet core.
 
+## Version 2.4
+Remove post publication date from Calendar Events (using the Timely Calendar)
+
 ## Version 2.3
 Facilities for video podcasting added
 
