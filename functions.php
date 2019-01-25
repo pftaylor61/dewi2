@@ -502,7 +502,7 @@ function dewi2_scripts_styles() {
 
 	// Register and enqueue our icon font
 	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'font-awesome-4.7.0/css/font-awesome.min.css' , array( 'normalize' ), '4.7.0', 'all' );
+	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/all.css' , array( 'normalize' ), '5.6.3', 'all' );
 	wp_enqueue_style( 'fontawesome' );
 
 	// Our styles for setting up the grid.
@@ -593,8 +593,8 @@ if ( ! function_exists( 'dewi2_content_nav' ) ) {
 
 			<?php if ( is_single() ) { // navigation links for single posts ?>
 
-				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="fa fa-angle-left"></i>', 'Previous post link', 'dewi2' ) . '</span> %title' ); ?>
-				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="fa fa-angle-right"></i>', 'Next post link', 'dewi2' ) . '</span>' ); ?>
+				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="fas fa-angle-left"></i>', 'Previous post link', 'dewi2' ) . '</span> %title' ); ?>
+				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="fas fa-angle-right"></i>', 'Next post link', 'dewi2' ) . '</span>' ); ?>
 
 			<?php } 
 			elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) { // navigation links for home, archive, and search pages ?>
@@ -605,9 +605,9 @@ if ( ! function_exists( 'dewi2_content_nav' ) ) {
 					'current' => max( 1, get_query_var( 'paged' ) ),
 					'total' => $wp_query->max_num_pages,
 					'type' => 'list',
-					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left"></i> Previous', 'dewi2' ), array( 'i' => array( 
+					'prev_text' => wp_kses( __( '<i class="fas fa-angle-left"></i> Previous', 'dewi2' ), array( 'i' => array( 
 						'class' => array() ) ) ),
-					'next_text' => wp_kses( __( 'Next <i class="fa fa-angle-right"></i>', 'dewi2' ), array( 'i' => array( 
+					'next_text' => wp_kses( __( 'Next <i class="fas fa-angle-right"></i>', 'dewi2' ), array( 'i' => array( 
 						'class' => array() ) ) )
 				) ); ?>
 
@@ -779,7 +779,7 @@ if ( ! function_exists( 'dewi2_posted_on' ) ) {
 		}
 
 		// Translators: 1: Icon 2: Permalink 3: Post date and time 4: Publish date in ISO format 5: Post date
-		$date = sprintf( '<i class="fa %1$s"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a>',
+		$date = sprintf( '<i class="fas %1$s"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a>',
 			$post_icon,
 			esc_url( get_permalink() ),
 			sprintf( esc_html__( '%1$s @ %2$s', 'dewi2' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
@@ -788,7 +788,7 @@ if ( ! function_exists( 'dewi2_posted_on' ) ) {
 		);
 
 		// Translators: 1: Date link 2: Author link 3: Categories 4: No. of Comments
-		$author = sprintf( '<i class="fa fa-pencil"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
+		$author = sprintf( '<i class="fas fa-pencil"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'dewi2' ), get_the_author() ) ),
 			get_the_author()
@@ -798,7 +798,7 @@ if ( ! function_exists( 'dewi2_posted_on' ) ) {
 		$categories_list = get_the_category_list( esc_html__( ' ', 'dewi2' ) );
 
 		// Translators: 1: Permalink 2: Title 3: No. of Comments
-		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
+		$comments = sprintf( '<span class="comments-link"><i class="fas fa-comment"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_comments_link() ),
 			esc_attr( esc_html__( 'Comment on ' , 'dewi2' ) . the_title_attribute( 'echo=0' ) ),
 			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number(), 'dewi2' ), get_comments_number() ) : esc_html__( 'No Comments', 'dewi2' ) )
@@ -836,7 +836,7 @@ if ( ! function_exists( 'dewi2_entry_meta' ) ) {
 
 		// Translators: 1 is tag
 		if ( $tag_list ) {
-			printf( wp_kses( __( '<i class="fa fa-tag"></i> %1$s', 'dewi2' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
+			printf( wp_kses( __( '<i class="fas fa-tag"></i> %1$s', 'dewi2' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
 		}
 	}
 }
@@ -977,30 +977,31 @@ if ( ! function_exists( 'dewi2_get_social_media' ) ) {
 	function dewi2_get_social_media() {
 		$output = '';
 		$icons = array(
-			array( 'url' => of_get_option( 'social_facebook', '' ), 'icon' => 'fa-facebook', 'title' => esc_html__( 'Like us on Facebook', 'dewi2' ) ),
-            array( 'url' => of_get_option( 'social_twitter', '' ), 'icon' => 'fa-twitter', 'title' => esc_html__( 'Follow us on Twitter', 'dewi2' ) ),
-            array( 'url' => of_get_option( 'social_mewe', '' ), 'icon' => 'fa-quote-left', 'title' => esc_html__( 'Connect with me on MeWe', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_googleplus', '' ), 'icon' => 'fa-google-plus', 'title' => esc_html__( 'Connect with me on Google+', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_linkedin', '' ), 'icon' => 'fa-linkedin', 'title' => esc_html__( 'Connect with me on LinkedIn', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_slideshare', '' ), 'icon' => 'fa-slideshare', 'title' => esc_html__( 'Follow me on SlideShare', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_dribbble', '' ), 'icon' => 'fa-dribbble', 'title' => esc_html__( 'Follow me on Dribbble', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_bitbucket', '' ), 'icon' => 'fa-bitbucket', 'title' => esc_html__( 'Fork me on Bitbucket', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_foursquare', '' ), 'icon' => 'fa-foursquare', 'title' => esc_html__( 'Follow me on Foursquare', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_youtube', '' ), 'icon' => 'fa-youtube', 'title' => esc_html__( 'Visit our YouTube Channel', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_instagram', '' ), 'icon' => 'fa-instagram', 'title' => esc_html__( 'Follow me on Instagram', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_vimeo', '' ), 'icon' => 'fa-vimeo', 'title' => esc_html__( 'Visit our Vimeo Channel', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_pinterest', '' ), 'icon' => 'fa-pinterest', 'title' => esc_html__( 'Follow us on Pinterest', 'dewi2' ) ),
-            array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fa-tumblr', 'title' => esc_html__( 'Follow us on Tumblr', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_github', '' ), 'icon' => 'fa-github', 'title' => esc_html__( 'Fork me on GitHub', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_rss', '' ), 'icon' => 'fa-rss', 'title' => esc_html__( 'Subscribe to our RSS Feed', 'dewi2' ) ),
-			array( 'url' => of_get_option( 'social_vodcast', '' ), 'icon' => 'fa-television', 'title' => esc_html__( 'Subscribe to our Vodcast', 'dewi2' ) ),
-            array( 'url' => of_get_option( 'social_podcast', '' ), 'icon' => 'fa-podcast', 'title' => esc_html__( 'Subscribe to our Podcast', 'dewi2' ) )
+			array( 'url' => of_get_option( 'social_facebook', '' ), 'icon' => 'fab fa-facebook', 'title' => esc_html__( 'Like us on Facebook', 'dewi2' ) ),
+            array( 'url' => of_get_option( 'social_twitter', '' ), 'icon' => 'fab fa-twitter', 'title' => esc_html__( 'Follow us on Twitter', 'dewi2' ) ),
+            array( 'url' => of_get_option( 'social_mewe', '' ), 'icon' => 'fas fa-share-square', 'title' => esc_html__( 'Connect with me on MeWe', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_googleplus', '' ), 'icon' => 'fab fa-google-plus', 'title' => esc_html__( 'Connect with me on Google+', 'dewi2' ) ),
+                        array( 'url' => of_get_option( 'social_tripadvisor', '' ), 'icon' => 'fab fa-tripadvisor', 'title' => esc_html__( 'Review us on TripAdvisor', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_linkedin', '' ), 'icon' => 'fab fa-linkedin', 'title' => esc_html__( 'Connect with me on LinkedIn', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_slideshare', '' ), 'icon' => 'fab fa-slideshare', 'title' => esc_html__( 'Follow me on SlideShare', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_dribbble', '' ), 'icon' => 'fab fa-dribbble', 'title' => esc_html__( 'Follow me on Dribbble', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_bitbucket', '' ), 'icon' => 'fab fa-bitbucket', 'title' => esc_html__( 'Fork me on Bitbucket', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_foursquare', '' ), 'icon' => 'fab fa-foursquare', 'title' => esc_html__( 'Follow me on Foursquare', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_youtube', '' ), 'icon' => 'fab fa-youtube', 'title' => esc_html__( 'Visit our YouTube Channel', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_instagram', '' ), 'icon' => 'fab fa-instagram', 'title' => esc_html__( 'Follow me on Instagram', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_vimeo', '' ), 'icon' => 'fab fa-vimeo', 'title' => esc_html__( 'Visit our Vimeo Channel', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_pinterest', '' ), 'icon' => 'fab fa-pinterest', 'title' => esc_html__( 'Follow us on Pinterest', 'dewi2' ) ),
+            array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fab fa-tumblr', 'title' => esc_html__( 'Follow us on Tumblr', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_github', '' ), 'icon' => 'fab fa-github', 'title' => esc_html__( 'Fork me on GitHub', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_rss', '' ), 'icon' => 'fas fa-rss', 'title' => esc_html__( 'Subscribe to our RSS Feed', 'dewi2' ) ),
+			array( 'url' => of_get_option( 'social_vodcast', '' ), 'icon' => 'fas fa-television', 'title' => esc_html__( 'Subscribe to our Vodcast', 'dewi2' ) ),
+            array( 'url' => of_get_option( 'social_podcast', '' ), 'icon' => 'fas fa-podcast', 'title' => esc_html__( 'Subscribe to our Podcast', 'dewi2' ) )
                     );
 
 		foreach ( $icons as $key ) {
 			$value = $key['url'];
 			if ( !empty( $value ) ) {
-				$output .= sprintf( '<li><a href="%1$s" title="%2$s"%3$s><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa %4$s fa-stack-1x fa-inverse"></i></span></a></li>',
+				$output .= sprintf( '<li><a href="%1$s" title="%2$s"%3$s><span class="fa-stack fa-lg"><i class="fas fa-square fa-stack-2x"></i><i class="%4$s fa-stack-1x fa-inverse"></i></span></a></li>',
 					esc_url( $value ),
 					$key['title'],
 					( !of_get_option( 'social_newtab', '0' ) ? '' : ' target="_blank"' ),

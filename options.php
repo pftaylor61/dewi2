@@ -121,6 +121,13 @@ function optionsframework_options() {
 		'id' => 'social_googleplus',
 		'std' => '',
 		'type' => 'text' );
+        
+        $options[] = array(
+		'name' => esc_html__( 'TripAdvisor', 'dewi2' ),
+		'desc' => esc_html__( 'Enter your Google+ URL.', 'dewi2' ),
+		'id' => 'social_tripadvisor',
+		'std' => '',
+		'type' => 'text' );
 
 	$options[] = array(
 		'name' => esc_html__( 'LinkedIn', 'dewi2' ),
