@@ -6,6 +6,9 @@
 ## Origins
 The original Dewi theme was based on Themegrill's Spacious theme, with a Child theme added. Eventually, an update to Spacious conflicted with the Child theme, so I combined child and parent theme under a new name - Dewi. Recently, the Dewi theme was found to conflict with the Blubrry Podcasting plugin, which I needed for the operation of my podcast. The Qohelet theme did not conflict with Blubrry, so I built a completely new Dewi theme, using the Qohelet core.
 
+## Version 2.5.1
+Some minor style changes to style.css, because of the requirements of Font Awesome 5.
+
 ## Version 2.5
 Several new features in Version 2.5
 * Support for TripAdvisor added
