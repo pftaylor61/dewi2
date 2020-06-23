@@ -37,9 +37,15 @@
 		<?php }
 		else { ?>
 			<div class="entry-content">
-				<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'dewi2' ), array( 'span' => array( 
+				<?php
+						if ( is_home () || is_category() || is_archive() ) {
+                                    the_excerpt('');
+                                    } else {
+									the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'dewi2' ), array( 'span' => array( 
 					'class' => array() ) ) )
-					); ?>
+					); 
+					}
+					?>
 				<?php wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dewi2' ),
 					'after' => '</div>',
